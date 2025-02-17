@@ -63,13 +63,7 @@ function App() {
           <div className="px-4 py-2 border-b border-gray-800 flex items-center justify-between bg-gray-800/50">
             <h2 className="font-medium">Code Editor</h2>
             <div className="flex gap-2">
-              <button
-                onClick={resetCode}
-                className="px-2 py-1 rounded text-sm bg-gray-700 hover:bg-gray-600 transition-colors flex items-center gap-1.5"
-              >
-                <RotateCcw className="w-3.5 h-3.5" />
-                Reset
-              </button>
+            
               <button
                 onClick={runCode}
                 className="px-3 py-1 rounded text-sm bg-blue-600 hover:bg-blue-500 transition-colors flex items-center gap-1.5"
@@ -92,8 +86,17 @@ function App() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <div className="px-4 py-2 border-b border-gray-800 bg-gray-800/50">
+          <div className="px-4 py-2 border-b border-gray-800 flex items-center justify-between bg-gray-800/50">
             <h2 className="font-medium">Output</h2>
+            <div className="flex gap-2">
+              <button
+                onClick={resetCode}
+                className="px-2 py-1 rounded text-sm bg-gray-700 hover:bg-gray-600 transition-colors flex items-center gap-1.5"
+              >
+                <RotateCcw className="w-3.5 h-3.5" />
+                Reset
+              </button>
+            </div>
           </div>
           <div className="flex-1 bg-gray-800/30 p-4 font-mono overflow-auto">
             <pre className="text-gray-300 whitespace-pre-wrap">{output || 'Output will appear here...'}</pre>
